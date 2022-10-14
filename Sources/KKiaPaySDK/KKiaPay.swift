@@ -86,7 +86,6 @@ public struct KKiaPay: UIViewRepresentable {
 
     public func updateUIView(_ webView: WKWebView, context: Context) {
         let url = URL(string: base64EncodedUrl())
-        print(url)
         let request = URLRequest(url: url!)
         webView.load(request)
     }
