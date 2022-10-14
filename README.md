@@ -27,15 +27,15 @@ import KKiaPaySDK;
 ```swift
 private var kkiaPay: KKiaPay{
     KKiaPay(amount: "3000",
-            countries: ["BJ"],
             phone: "22997000000",
-            data: "Hello world",
             publicAPIKey: "xxxxxxxxxxxxxxxxxxx",
+            partnerId: "AxXxXXxId",
+            countries: ["BJ"],
+            paymentMethods: ["momo","card"],
+            data: "Hello world",
             sandbox: true,//set this to false in production
             theme: "#4E6BFC",
             name: "John Doe",
-            partnerId: 'AxXxXXxId',
-            paymentMethods: ["momo","card"],
             email:"user@email.com",
             callback: "https://redirect.kkiapay.com",
             viewModel:viewModel
@@ -73,15 +73,15 @@ struct ContentView: View {
         //Initialise the Kkiapay Instance
         private var kkiaPay: KKiaPay{
             KKiaPay(amount: "3000",
-                    countries: ["BJ"],
                     phone: "22997000000",
-                    data: "Hello world",
                     publicAPIKey: "xxxxxxxxxxxxxxxxxxx",
+                    partnerId: "AxXxXXxId",
+                    countries: ["BJ"],
+                    paymentMethods: ["momo","card"],
+                    data: "Hello world",
                     sandbox: true,//set this to false in production
                     theme: "#4E6BFC",
                     name: "John Doe",
-                    partnerId: 'AxXxXXxId',
-                    paymentMethods: ["momo","card"],
                     email:"user@email.com",
                     callback: "https://redirect.kkiapay.com",
                     viewModel:viewModel
