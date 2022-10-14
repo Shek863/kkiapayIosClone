@@ -63,7 +63,7 @@ public struct KKiaPay: UIViewRepresentable {
 
     private func base64EncodedUrl() -> String {
 
-        let encodedData = Data("{\"paymentMethods\":\(paymentMethods ?? ["momo","card"]),\"countries\":\(countries ?? ["BJ","CI"]),\"position\":\"left\",\"partnerId\":\(partnerId ?? ""),\"serviceId\":\"INTEGRATION\",\"amount\":\(amount ?? 1),\"phoneNumber\": \"\(phone ?? "")\",\"data\": \"\(data ?? "")\",\"key\": \"\(publicAPIKey ?? "")\",\"sandbox\":\(sandbox ?? true),\"theme\":\"\(theme ?? "")\",\"fullname\":\"\(name ?? "")\",\"email\": \"\(email ?? "")\",\"callback\": \"\(callback ?? "")\",\"sdk\":\"ios\",\"reason\":\"\"}".utf8).base64EncodedString()
+        let encodedData = Data("{\"paymentMethods\":\(paymentMethods ?? ["momo","card"]),\"countries\":\(countries ?? ["BJ","CI"]),\"position\":\"left\",\"partnerId\":\"\(partnerId ?? "")\",\"serviceId\":\"INTEGRATION\",\"amount\":\(amount ?? 1),\"phoneNumber\": \"\(phone ?? "")\",\"data\": \"\(data ?? "")\",\"key\": \"\(publicAPIKey ?? "")\",\"sandbox\":\(sandbox ?? true),\"theme\":\"\(theme ?? "")\",\"fullname\":\"\(name ?? "")\",\"email\": \"\(email ?? "")\",\"callback\": \"\(callback ?? "")\",\"sdk\":\"ios\",\"reason\":\"\"}".utf8).base64EncodedString()
         return "https://widget-v3.kkiapay.me/?"+encodedData
 
     }
